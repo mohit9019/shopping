@@ -1,0 +1,19 @@
+.admin-bar{
+    width: 100%;
+    margin: 2% 0 0 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list{
+    margin: auto 0;
+    font-size: 140%;
+    padding: 0 0 .5% 0;
+    animation: .3s ease;
+    text-decoration: none;
+    color: black;
+}
+.list:hover{
+    border-bottom:1px solid ;
+    color: rgb(23, 109, 156);
+}

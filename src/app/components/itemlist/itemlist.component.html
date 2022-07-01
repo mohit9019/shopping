@@ -1,0 +1,23 @@
+<div class="filter">
+    <select (change)="onChange($event)" name="type" id="type" required class="choice" value="All">
+        <option>Filter</option>
+        <option value="jacket">jacket</option>
+        <option value="jeans">jeans</option>
+        <option value="shirt">shirts</option>
+        <option value="all">All</option>
+    </select>
+</div>
+<div class="items">
+    <div *ngFor="let item of this.items">
+        <!-- <a routerLink="/preview"> -->
+            <div class="item-card">
+                <div class="img"><img src="{{item.imgpath}}" class="item-img" /></div>
+                <span class="item-price"><i class="far fa-rupee-sign"></i>Rs. {{item.price}}</span>
+                <div class="item-btns">
+                    <button class="item-btn" (click)="onClick(item)">Cart</button>
+                    <button class="item-btn">Buy</button>
+                </div>
+            </div>
+        <!-- </a> -->
+    </div>
+</div>

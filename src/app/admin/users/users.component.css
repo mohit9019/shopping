@@ -1,0 +1,20 @@
+.userdata{
+    width: 60%;
+    margin: 3% auto;
+    text-align: center;
+}
+.cart-btn {
+    width: 10%;
+    background-color: transparent;
+    border: rgb(71, 163, 243) 2px solid;
+    color: rgb(71, 163, 243);
+    font-size: 110%;
+    height: 30%;
+    border-radius: 5px;
+    margin: auto 2%;
+}
+
+.cart-btn:hover {
+    color: white;
+    background-color: rgb(71, 163, 243);
+}

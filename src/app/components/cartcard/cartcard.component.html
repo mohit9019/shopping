@@ -1,0 +1,18 @@
+
+<div *ngIf="this.carts && this.carts.length>=1; else elseBlock;">
+    <div class="cart" >
+        <div class="cart-card" *ngFor="let item of this.carts">
+            <div class="img"><img src="{{item.imgpath}}" class="cart-img" /></div>
+            <span class="cart-price"><i class="far fa-rupee-sign"></i>Rs. {{item.price}}</span>
+            <button class="cart-btn">Buy</button>
+            <span class="remove" (click)="onClick(item)">Remove</span>
+        </div>
+    </div>
+    <div class="checkout">
+        <span>Total: {{this.checkout}}</span>
+        <button class="chout">Checkout</button>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <p class="oops">Oops ...Your cart is empty !</p>
+</ng-template>

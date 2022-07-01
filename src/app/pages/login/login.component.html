@@ -1,0 +1,18 @@
+<div class="login">
+    <form class="inputs" (ngSubmit)="onSubmit()">
+        <div class="username">
+            <label for="" class="label">Username:</label>
+            <input type="text" [(ngModel)]="username" name="username" class="input" required>
+        </div>
+        <div class="password">
+            <label for="" class="label">Password:</label>
+            <input type="password" [(ngModel)]="password" name="password" class="input" required>
+            <div class="error">{{this.error}}</div>
+        </div>
+        <div class="btns">
+            <button (click)="onClick(1)" class="log-btn">Sign Up</button>
+            <button (click)="onClick(2)" class="log-btn">Log In</button>
+        </div>
+    </form>
+    <img src="./assets/images/lb3.jpg" alt="login" class="back-img" />
+</div>

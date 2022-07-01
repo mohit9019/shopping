@@ -1,0 +1,16 @@
+<app-adminbar></app-adminbar>
+<div class="userdata">
+    <div *ngIf="this.users && this.users.length===1; else elseBlock">No records yet</div>
+    <ng-template #elseBlock>
+        <table class="users" *ngFor="let u of this.users">
+            <tr class="row">
+                <td class="column">
+                    {{u.username}}
+                </td>
+                <td class="column">
+                    {{u.password}}
+                </td>
+            </tr>
+        </table>
+    </ng-template>
+</div>

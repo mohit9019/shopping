@@ -1,0 +1,58 @@
+.navbar{
+    width: 98%;
+    height: 80px;
+    display: flex;
+    padding: .2% 1%;
+    position: sticky;
+    box-shadow: 1px 0 6px 1px rgb(11, 11, 11,.2) ;
+}
+.brand{
+    width: 15%;
+    padding: 0 0 0 1%;
+    display: flex;
+}
+.name{
+    font-size: 150%;
+    color: rgb(23, 109, 156);
+    margin: auto;
+}
+.logo{
+    width: 35%;
+    height: auto;
+} 
+.tab-list{
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* flex-direction: row; */
+}
+.tab{
+    margin:auto 5% auto 0 ;
+    font-size: 140%;
+    padding-bottom: 1%;
+    transition: .1s ease;
+    text-decoration: none;
+    color:black;
+    display: flex;
+}
+.tab:hover{
+    color: rgb(23, 109, 156);
+    border-bottom: .1rem rgb(23, 109, 156) solid;
+}
+.is-active{
+    color: rgb(23, 109, 156);
+    border-bottom: .1rem rgb(23, 109, 156) solid;
+}
+.strength{
+    border: 1px solid;
+    font-size: 70%;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+    background-color: rgb(23, 109, 156);
+    color: white;
+    border: none;
+    border-radius: 50px;
+}

@@ -1,18 +1,76 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ItemlistComponent } from './components/itemlist/itemlist.component';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './pages/login/login.component';
+import { ItemsService } from './services/items.service';
+import { CartcardComponent } from './components/cartcard/cartcard.component';
+import { OrdersComponent } from './pages/orders/orders.component';
+import { OrderCardComponent } from './components/order-card/order-card.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { AdminbarComponent } from './components/adminbar/adminbar.component';
+import { UsersComponent } from './admin/users/users.component';
+import { ProductsComponent } from './admin/products/products.component';
 
+const appRoutes : Routes=[
+  {path:'', component:LoginComponent},
+  {path:'home',component:HomeComponent},
+  {path:'cart', component: CartComponent},
+  {path:'preview', component:OrdersComponent},
+  {path:'admin',
+    children:[{
+      path:'',
+      component:UsersComponent
+    },
+    {
+      path:'products',
+      component:ProductsComponent
+    },
+    {
+      path:'productform',
+      component:AdminComponent
+    }
+  ]
+  },
+
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    CartComponent,
+    ItemlistComponent,
+    LoginComponent,
+    CartcardComponent,
+    OrdersComponent,
+    OrderCardComponent,
+    AdminComponent,
+    AdminbarComponent,
+    UsersComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    ItemsService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+  }
+ }

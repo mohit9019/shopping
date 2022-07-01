@@ -1,0 +1,27 @@
+<app-adminbar></app-adminbar>
+<div class="form" >
+    <form class="inputs" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <label for="" class="label">Image:</label>
+            <input type="file" [(ngModel)]="image" name="image" placeholder="imagepath" class="input" required>
+        </div>
+        <div class="row">
+            <label for="" class="label">Price:</label>
+            <input type="number" min="100" max="2000" [(ngModel)]="price" name="price" class="input" required>
+            <div class="error"></div>
+        </div>
+        <div class="row">
+            <label for="" class="label">Type:</label>
+            <select class="input" name="type" [(ngModel)]="type" id="type" required>
+                <option value="jacket">jacket</option>
+                <option value="jeans">jeans</option>
+                <option value="shirt">shirt</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <div class="row">
+            <button class="log-btn">Add</button>
+        </div>
+    </form>
+</div>
+
