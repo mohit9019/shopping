@@ -1,12 +1,10 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ItemlistComponent } from './components/itemlist/itemlist.component';
 import { AuthService } from './services/auth.service';
@@ -20,28 +18,6 @@ import { AdminbarComponent } from './components/adminbar/adminbar.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ProductsComponent } from './admin/products/products.component';
 
-const appRoutes : Routes=[
-  {path:'', component:LoginComponent},
-  {path:'home',component:HomeComponent},
-  {path:'cart', component: CartComponent},
-  {path:'preview', component:OrdersComponent},
-  {path:'admin',
-    children:[{
-      path:'',
-      component:UsersComponent
-    },
-    {
-      path:'products',
-      component:ProductsComponent
-    },
-    {
-      path:'productform',
-      component:AdminComponent
-    }
-  ]
-  },
-
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +38,6 @@ const appRoutes : Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     AuthService,

@@ -8,8 +8,8 @@ export class AuthService {
   user?: Users[];
   username?: string;
   password?: string;
-
-
+  isAuthenticated:boolean=false;
+  isAdmin:boolean=false;
   constructor() {
     this.user = [
       {
@@ -24,6 +24,7 @@ export class AuthService {
       password: pword,
     }
     if (uname === "mohit" && pword === "aswd") {
+      this.isAdmin=true;
       return 101;
     }
     else if (type === 1) {
@@ -35,6 +36,7 @@ export class AuthService {
       }
       else {
         this.user?.push(ind);
+        this.isAuthenticated=true;
         return 400
       }
     }
@@ -43,6 +45,7 @@ export class AuthService {
         return e.username === uname && e.password === pword;
       });
       if (results && results.length === 1) {
+        this.isAuthenticated=true;
         return 303;
       }
       else {

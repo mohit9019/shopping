@@ -12,7 +12,9 @@ export class LoginComponent implements OnInit {
   password:string="";
   error:string="";
   button:number=0;
-  constructor(private service:AuthService , private router :Router) { }
+  constructor(private service:AuthService , private router :Router) { 
+    console.log('login');
+  }
 
   ngOnInit(): void {
   }

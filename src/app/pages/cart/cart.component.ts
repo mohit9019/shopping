@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CartComponent implements OnInit {
   constructor() { 
+    console.log('cart');
   }
   ngOnInit(): void {
   }

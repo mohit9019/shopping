@@ -8,6 +8,7 @@ import { Items } from 'src/app/Items';
 })
 export class HomeComponent implements OnInit {
   constructor(){
+    console.log('home')
   }
   ngOnInit(): void {
   }
