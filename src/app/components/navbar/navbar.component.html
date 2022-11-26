@@ -5,6 +5,6 @@
     </div>
     <div class="tab-list">
         <a routerLink="/cart" class="tab"><span> Cart</span><div *ngIf="this.cartitem>=1"  class="strength">{{this.cartitem}}</div></a>
-        <a routerLink="" class="tab" ><span>Log Out</span></a>
+        <a href="#" class="tab" (click)="onClick()" ><span>Log Out</span></a>
     </div>
 </div>

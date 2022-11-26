@@ -17,7 +17,7 @@ const routes: Routes = [
   children:[{
     path:'',
     component:UsersComponent,
-    },
+    }, 
     {
       path:'products',
       component:ProductsComponent,
@@ -27,7 +27,7 @@ const routes: Routes = [
       component:AdminComponent,
     }
   ],
-  canActivateChild:[AdminGuard]
+  canActivateChild:[AdminGuard],
 },
 {path:'**', component:LoginComponent},
 ];
@@ -37,7 +37,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  constructor(){
-    console.log('app-routing');
-  }
  }

@@ -10,10 +10,9 @@ import { Router } from '@angular/router';
 export class AdminGuard implements CanActivateChild {
   isAdmin:boolean=false;
   constructor(private user:AuthService, private router:Router){
-      this.isAdmin=user.isAdmin;
+      this.isAdmin=this.user.isAdmin;
   }
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-      
     if(this.isAdmin) return this.isAdmin;
     else  return this.router.createUrlTree(['']);
   }

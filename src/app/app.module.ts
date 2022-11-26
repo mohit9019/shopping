@@ -11,8 +11,6 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './pages/login/login.component';
 import { ItemsService } from './services/items.service';
 import { CartcardComponent } from './components/cartcard/cartcard.component';
-import { OrdersComponent } from './pages/orders/orders.component';
-import { OrderCardComponent } from './components/order-card/order-card.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { AdminbarComponent } from './components/adminbar/adminbar.component';
 import { UsersComponent } from './admin/users/users.component';
@@ -27,8 +25,6 @@ import { ProductsComponent } from './admin/products/products.component';
     ItemlistComponent,
     LoginComponent,
     CartcardComponent,
-    OrdersComponent,
-    OrderCardComponent,
     AdminComponent,
     AdminbarComponent,
     UsersComponent,
